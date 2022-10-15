@@ -22,8 +22,19 @@ let postDATA = async (req, res) => {
     return res.send("Pham Van Khanh");
 };
 
+let getDATA = async (req, res) => {
+    let data = await CRUDService.getAllUser();
+    console.log("----------------");
+    console.log(data);
+    console.log("----------------");
+    return res.render("getCRUD.ejs", {
+        datatable: data,
+    });
+};
+
 module.exports = {
     homePage: homePage,
     getCRUD: getCRUD,
     postDATA: postDATA,
+    getDATA: getDATA,
 };
