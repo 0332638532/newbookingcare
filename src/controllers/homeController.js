@@ -24,11 +24,32 @@ let postDATA = async (req, res) => {
 
 let getDATA = async (req, res) => {
     let data = await CRUDService.getAllUser();
-    console.log("----------------");
-    console.log(data);
-    console.log("----------------");
+    // console.log("----------------");
+    // console.log(data);
+    // console.log("----------------");
     return res.render("getCRUD.ejs", {
         datatable: data,
+    });
+};
+
+let editDATA = async (req, res) => {
+    let userid = req.query.id;
+    if (userid) {
+        let userData = await CRUDService.getUserId(userid);
+
+        return res.render("editCRUD.ejs", {
+            user: userData,
+        });
+    } else {
+        return res.send("user not found");
+    }
+};
+
+let putDATA = async (req, res) => {
+    let data = req.body;
+    let allusers = await CRUDService.updateUser(data);
+    return res.render("getCRUD.ejs", {
+        datatable: allusers,
     });
 };
 
@@ -37,4 +58,6 @@ module.exports = {
     getCRUD: getCRUD,
     postDATA: postDATA,
     getDATA: getDATA,
+    editDATA: editDATA,
+    putDATA: putDATA,
 };
