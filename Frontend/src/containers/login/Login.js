@@ -8,7 +8,30 @@ import { FormattedMessage } from "react-intl";
 class Login extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            username: "",
+            password: "",
+            isShowpass: false,
+        };
     }
+
+    handleOnchangeInput = (event) => {
+        this.setState({
+            username: event.target.value,
+            password: event.target.value,
+        });
+        console.log(event.target.value);
+    };
+
+    handleLogin = () => {
+        alert("Pham Van Khanh");
+    };
+
+    handleShowPassword = () => {
+        this.setState({
+            isShowpass: !this.state.isShowpass,
+        });
+    };
 
     render() {
         return (
@@ -22,18 +45,52 @@ class Login extends Component {
                                 type="text"
                                 className="form-control"
                                 placeholder="Enter your username"
+                                value={this.state.username}
+                                onChange={(event) =>
+                                    this.handleOnchangeInput(event)
+                                }
                             />
                         </div>
                         <div className="col-12 form-group login-input">
                             <label>Password</label>
-                            <input
-                                type="password"
-                                className="form-control"
-                                placeholder="Enter your password"
-                            />
+                            <div className="custom-input-password">
+                                <input
+                                    type={
+                                        this.state.isShowpass
+                                            ? "text"
+                                            : "password"
+                                    }
+                                    className="form-control"
+                                    placeholder="Enter your password"
+                                    value={this.state.password}
+                                    onChange={(event) =>
+                                        this.handleOnchangeInput(event)
+                                    }
+                                />
+                                <span
+                                    onClick={() => {
+                                        this.handleShowPassword();
+                                    }}
+                                >
+                                    <i
+                                        class={
+                                            this.state.isShowpass
+                                                ? "fas fa-eye-slash"
+                                                : "fas fa-eye"
+                                        }
+                                    ></i>
+                                </span>
+                            </div>
                         </div>
                         <div className="col-12">
-                            <button className="btn-login">Login</button>
+                            <button
+                                className="btn-login"
+                                onClick={() => {
+                                    this.handleLogin();
+                                }}
+                            >
+                                Login
+                            </button>
                         </div>
                         <div>
                             <span className="forgot-password">
