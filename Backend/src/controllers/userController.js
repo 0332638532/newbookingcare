@@ -6,7 +6,7 @@ let handleLogin = async (req, res) => {
     if (!email || !password) {
         return res.status(404).json({
             errCode: 1,
-            message: "Vui long nhap gia tri",
+            message: "Please enter your account and password",
         });
     }
     let userData = await userService.handleUserLogin(email, password);

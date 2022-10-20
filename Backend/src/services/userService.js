@@ -16,21 +16,21 @@ let handleUserLogin = (email, password) => {
                     let check = bcrypt.compareSync(password, user.password); // false
                     if (check) {
                         userData.errCode = 0;
-                        userData.errMessage = "Success";
+                        userData.errMessage = "Login success";
                         delete user.password;
                         userData.user = user;
                     } else {
                         userData.errCode = 3;
-                        userData.errMessage = "Password wrong";
+                        userData.errMessage =
+                            "Password is incorrect, please re-enter";
                     }
                 } else {
                     userData.errCode = 2;
-                    userData.errMessage = "User not found";
+                    userData.errMessage = "Invalid account, please re-enter";
                 }
             } else {
                 userData.errCode = 1;
-                userData.errMessage =
-                    "Tai khoan khong ton tai, vui long nhap lai";
+                userData.errMessage = "Account does not exist ";
             }
             resolve(userData);
         } catch (e) {
