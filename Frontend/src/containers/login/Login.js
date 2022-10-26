@@ -12,7 +12,7 @@ class Login extends Component {
         this.state = {
             username: "",
             password: "",
-            isShowpass: false,
+            isShowPass: false,
             errMessage: "",
         };
     }
@@ -62,7 +62,7 @@ class Login extends Component {
 
     handleShowPassword = () => {
         this.setState({
-            isShowpass: !this.state.isShowpass,
+            isShowPass: !this.state.isShowPass,
         });
     };
 
@@ -94,7 +94,7 @@ class Login extends Component {
                             <div className="custom-input-password">
                                 <input
                                     type={
-                                        this.state.isShowpass
+                                        this.state.isShowPass
                                             ? "text"
                                             : "password"
                                     }
@@ -112,7 +112,7 @@ class Login extends Component {
                                 >
                                     <i
                                         class={
-                                            this.state.isShowpass
+                                            this.state.isShowPass
                                                 ? "fas fa-eye-slash"
                                                 : "fas fa-eye"
                                         }
