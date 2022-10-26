@@ -73,6 +73,10 @@
             flex-direction: column;
             width: 49%;
 
+            &.input-address {
+                width: 100%;
+            }
+
             input {
                 border-radius: 5px;
                 height: 30px;
