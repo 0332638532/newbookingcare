@@ -1,4 +1,25 @@
 {
+    "homeheader": {
+        "specialist": "Medical specialty",
+        "healthfacilities": "Health facilities",
+        "doctor": "Doctor",
+        "examinationpackage": "Medical examination package",
+        "finddoctor": "Find a doctor by specialty",
+        "chooseroom": "Choose a hospital or clinic",
+        "choosedoctor": "Choose a good doctor",
+        "generalexamination": "General health check",
+        "support": "Support"
+    },
+    "banner": {
+        "medicalcommunication": "MEDICAL COMMUNICATION",
+        "healthcare": "COMPREHENSIVE HEALTH CARE",
+        "title1": "Specialist Examination",
+        "title2": "Remote Examination",
+        "title3": "General Examination",
+        "title4": "Medical Tests",
+        "title5": "Mental Health",
+        "title6": "Dental Examination"
+    },
     "common": {
         "add": "Add",
         "edit": "Edit",

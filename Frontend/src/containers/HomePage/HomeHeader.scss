@@ -1,0 +1,165 @@
+.home-header-container {
+    width   : 100%;
+    height  : 70px;
+    margin  : 20px;
+
+    .home-header-content {
+        width    : 100%;
+        height   : 100%;
+        display  : flex;
+        padding  : 0 20px;
+
+        .left-content {
+            width        : 25%;
+            display      : flex;
+            align-items  : center;
+
+            i {
+                font-size  : 25px;
+                color      : gray;
+                cursor     : pointer;
+            }
+
+            .logo-content {
+                background       : url("../../assets/images/logo-header.png") center center no-repeat;
+                width            : 60%;
+                height           : 100px;
+                cursor           : pointer;
+                background-size  : 100%;
+            }
+        }
+
+        .center-content {
+            width            : 50%;
+            display          : flex;
+            padding          : 10px 20px;
+            justify-content  : space-between;
+
+            .child-content {
+                .subs-title {
+                    font-weight  : 500;
+                    font-size    : 12px;
+                    cursor       : pointer;
+                }
+            }
+        }
+
+        .right-content {
+            width            : 25%;
+            display          : flex;
+            align-items      : center;
+            justify-content  : center;
+
+            .support {
+                margin-right  : 20px;
+            }
+
+            .flag {
+                margin-right  : 15px;
+            }
+        }
+    }
+}
+
+.home-header-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)), url("../../assets/images/header-booking.jpg");
+    height               : 700px;
+    background-repeat    : no-repeat;
+    background-size      : cover;
+    background-position  : center;
+    display              : flex;
+    flex-direction       : column;
+
+    .content-up {
+        height       : 60%;
+        padding-top  : 15px;
+
+        .title1 {
+            color        : white;
+            text-align   : center;
+            font-size    : 30px;
+            text-shadow  : 1px 1px 1px #333;
+            margin       : 15px;
+        }
+
+        .title2 {
+            color          : white;
+            text-align     : center;
+            font-size      : 30px;
+            text-shadow    : 1px 1px 1px #333;
+            margin-bottom  : 30px;
+        }
+
+        .search {
+            width            : fit-content;
+            display          : flex;
+            justify-content  : center;
+            align-items      : center;
+            margin           : 0 auto;
+            padding          : 10px;
+            border-radius    : 50px;
+            background       : green;
+
+            i {
+                margin  : 0 5px;
+                color   : white
+            }
+
+            input {
+                height      : 30px;
+                width       : 300px;
+                outline     : none;
+                background  : transparent;
+                border      : none;
+                color       : white;
+            }
+        }
+    }
+
+    .content-down {
+        height                           : 40%;
+        // display                : flex;
+        // align-items            : flex-end;
+        // justify-content        : center;
+        // background-image            : linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 1));
+
+        .options {
+            color            : white;
+            text-align       : center;
+            display          : flex;
+            justify-content  : center;
+            gap              : 50px;
+
+            .option-child {
+                width  : 90px;
+
+                .icon-child {
+                    background     : white;
+                    width          : 40px;
+                    height         : 40px;
+                    border-radius  : 50%;
+                    margin         : 0 auto;
+                    text-align     : center;
+                    padding        : 10px;
+
+                    i {
+                        color      : #49bce2;
+                        font-size  : 20px;
+                    }
+                }
+
+                .text-child {
+                    font-size    : 14px;
+                    font-weight  : 500;
+                    cursor       : pointer;
+
+                    &:hover {
+                        color  : #49bce2;
+                    }
+                }
+            }
+        }
+    }
+
+}
