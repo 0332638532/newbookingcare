@@ -9,7 +9,7 @@ const initContentOfConfirmModal = {
 
 const initialState = {
     started: true,
-    language: "en",
+    language: "vi",
     systemMenuPath: "/system/user-manage",
     contentOfConfirmModal: {
         ...initContentOfConfirmModal,
@@ -32,6 +32,11 @@ const appReducer = (state = initialState, action) => {
                 },
             };
         default:
+        case actionTypes.CHANGE_LANGUAGE:
+            return {
+                ...state,
+                language: action.language,
+            };
             return state;
     }
 };
